@@ -1,0 +1,85 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+const App=()=>{
+
+    const r1=React.useRef();
+    const r2=React.useRef();
+    const r3=React.useRef();
+
+    const sum=()=>{
+        
+            const num1=r1.current.value;
+            const num2=r2.current.value;
+            const sum=parseInt(num1)+parseInt(num2);
+            r3.current.innerText=sum;
+    }
+
+    const mul=()=>{
+        
+            const num1=r1.current.value;
+            const num2=r2.current.value;
+            const mul=parseInt(num1)*parseInt(num2);
+            r3.current.innerText=mul;
+    }
+
+    const div=()=>{
+            const num1=r1.current.value;
+            const num2=r2.current.value;
+            const div=parseInt(num1)/parseInt(num2);
+            r3.current.innerText=div;
+    }
+
+    const mod=()=>{
+            const num1=r1.current.value;
+            const num2=r2.current.value;
+            const mod=parseInt(num1)%parseInt(num2);
+            r3.current.innerText=mod;
+    }
+
+    const sub=()=>{
+        const n1=r1.current.value;
+        const n2=r2.current.value;
+        const sub=parseInt(n1)-parseInt(n2);
+        r3.current.innerText=sub;
+    }
+
+    const reverse=()=>{
+        var newString = "";
+        const str=r1.current.value;
+        for (var i = str.length - 1; i >= 0; i--) {
+                    newString += str[i];
+        }
+        r3.current.innerText=newString;
+    }
+    
+
+    return <div>
+            <p>No. 1 <input ref={r1} /></p>
+            <p>No. 2 <input ref={r2} /></p>
+            <p>
+                <button onClick={sum}>Addition</button>
+                <button onClick={sub}>Substraction</button>
+                <button onClick={mul}>Multiplication</button>
+                <button onClick={div}>Division</button>
+                <button onClick={mod}>MOD</button>
+
+                <button onClick={reverse}>Reverse</button>
+                
+            </p>
+            <h3>Result = <span ref={r3}>0</span></h3>
+        </div>
+
+}
+
+    var root=ReactDOM.createRoot(document.getElementById('root'));
+
+    root.render(<App />);
+
+</script>

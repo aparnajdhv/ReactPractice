@@ -1,0 +1,41 @@
+<script src="react.development.js"></script>
+<script src="babel.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+<script type="text/babel">
+
+    const A=({result})=>{
+        return <h2>App : result {result}</h2>
+    }
+
+    const App=()=>{
+        
+        const [data,setData]=React.useState({});
+        const [msg,setMsg]=React.useState(0);
+        let result=0;
+
+        const fnChange=(eve)=>{
+            const {id,value}=eve.target;
+            data[id]=Number(value);
+        }
+
+        const fnClick=(eve)=>{            
+            const {n1,n2}=data;
+            result=n1+n2;
+            setMsg(result)
+        }
+
+        return <div>
+                <p>No 1. <input id='n1' onChange={fnChange}/></p>
+                <p> No 2. <input id='n2' onChange={fnChange} /></p>
+                <button name='sum' onClick={fnClick}>Sum</button>
+                <A result={msg} />
+            </div>
+        
+    }
+
+    const root=ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+
+</script>

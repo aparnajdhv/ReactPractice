@@ -1,0 +1,30 @@
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+
+
+<div id="root">
+</div>
+
+<script type="text/babel">
+  
+    
+    class Hellow extends React.Component{
+        constructor(){
+            super()
+            console.log('constructor called')
+        }
+        render(){
+            console.log('render called')
+            return <h1>Hellow World</h1>
+        }
+    }
+
+
+    var root= ReactDOM.createRoot(document.getElementById('root'))
+
+    root.render(<Hellow />)
+
+</script>

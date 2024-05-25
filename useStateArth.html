@@ -1,0 +1,60 @@
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+ 
+<div id="root"></div>
+   
+<script type="text/babel">
+    const App=()=>{
+        const [data,setData]=React.useState({});
+        const [msg,setMsg]=React.useState(0);
+
+        const fnChange=(eve)=>{
+            const {id,value}=eve.target;
+            data[id]=Number(value);
+        }
+
+        const fnClick=(eve)=>{
+            const name=eve.target.name;
+            const {n1,n2}=data;
+            let result=0;
+            switch(name)
+            {
+                case 'sum':
+                    result = n1+n2;
+                    break;
+                case 'sub':
+                    result = n1-n2;
+                    break;
+                case 'div':
+                    result = n1/n2;
+                    break;
+                case 'mul':
+                    result = n1*n2;
+                    break;
+                // case 'reverse':
+                //     result = n1.split("").reverse().join("");
+                //     break;
+            }
+            setMsg(result);
+        }
+        
+        
+        return <div>
+        <p>No. 1<input id='n1' onChange={fnChange} /> </p>
+        <p>No. 2<input id='n2' onChange={fnChange} /> </p>
+        <button name='sum' onClick={fnClick} >Sum </button>
+        <button name='sub' onClick={fnClick} >Sub </button>
+        <button name='div' onClick={fnClick} >Div </button>
+        <button name='mul' onClick={fnClick} >Multi </button>
+        <button name='reverse' onClick={fnClick} >reverse </button>
+        
+        <h3>Result: {msg}</h3>
+        </div>
+    }
+var root=ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(<App />);
+</script>  
+    

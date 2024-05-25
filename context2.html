@@ -1,0 +1,72 @@
+<script src="react.development.js"></script>
+<script src="babel.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+//1. create context 
+const ctx=React.createContext()
+
+const E=()=>{
+        const ctxData=React.useContext(ctx)
+        return <div>
+             <h1>E:{ctxData}</h1>
+            </div>
+    }
+const D=()=>{
+        return <div>
+             <h1>D</h1>
+             <E />
+            </div>
+    }
+ const C=()=>{
+    const ctxData=React.useContext(ctx)
+        return <div>
+             <h1>C:{ctxData}</h1>
+            </div>
+    }
+ const B=()=>{
+        return <div>
+             <h1>B</h1>
+             <C />
+             <D />
+            </div>
+    }
+const A=()=>{
+        return <div>
+             <h1>A</h1>
+             <B />
+            </div>
+    }
+    const App=()=>{
+        const nameRef=React.useRef()
+        const [name,setName]=React.useState('Sachin')
+        const fnSubmit=()=>{
+            setName(nameRef.current.value)
+        }
+        return <div>
+             <h1>App</h1>
+             <p>
+                Name:<input ref={nameRef} />
+             </p>
+             <p>
+                  <button onClick={fnSubmit}>Submit</button>
+             </p>
+
+             <ctx.Provider value={name}>
+                <A />
+             </ctx.Provider>
+           
+            </div>
+    }
+    var root=ReactDOM.createRoot(document.getElementById('root'))
+    root.render(<App />)
+
+</script>
+
+
+
+
+

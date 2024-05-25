@@ -1,0 +1,61 @@
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root">
+
+<style>
+
+</style>
+
+<script type="text/babel">
+  
+    const App=()=>{
+
+      const [info,setData]=React.useState({});    
+      const [msg,setMsg]=React.useState(0);
+
+      const fnChange=(eve)=>{
+        const {id,value}=eve.target;
+          info[id]=Number(value);
+      }
+      
+
+    const fnClick=(eve)=>{
+      const name=eve.target.name;
+      const {n1,n2}=info;
+      let result=0
+
+      switch (name){
+        case 'sum':
+        result=n1+n2;
+        break;
+      }
+      setMsg(result);
+    }
+      
+      
+        return <div>
+               <p>
+                  <b>no1: </b><input type='number' id='n1' onChange={fnChange} />
+               </p>
+               <p>
+                  <b>no2: </b><input type='number' id='n2' onChange={fnChange} />
+               </p>
+               <p>
+                  <button name='sum' onClick={fnClick}>sum</button>
+               </p>
+
+               <h3>
+                 Result is : <span>{msg}</span>
+               </h3>
+
+            </div>
+    }
+
+    var root= ReactDOM.createRoot(document.getElementById('root'))
+    root.render(<App />)
+
+</script>
+

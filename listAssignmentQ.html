@@ -1,0 +1,96 @@
+<script src="react.development.js"></script>
+<script src="babel.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+
+<style>
+  .btnSubmit{
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    border: 0px;
+    border-radius: 5px;
+  }
+</style>
+
+<script type="text/babel">
+
+    
+const App=()=>{
+
+    const questions=[
+        {
+            no:'1',
+            ques:'Below which hook we use to get the reference ,?',
+            opt: ['useState','useRef','useEffect','useMemo'],
+            qType:'s',
+            ans:'b'
+        },
+        {
+            no:'2',
+            ques:'Which are the block level elements ?',
+            opt: ['<h1>','<p>','<span>','<div>'],
+            qType:'m',
+            ans:'abd'
+        },
+        {
+            no:'3',
+            ques:'What is ReactJS ?',
+            opt: ['Server-Side Framework','User Interface framework', 'both a & b', 'none of the above'],
+            qType:'s',
+            ans:'b'
+        },
+        {
+            no:'4',
+            ques:'Which of the following is used in React.js to increase performance?',
+            opt: ['Virtual DOM','original DOM', 'both' , 'none of the above'],
+            qType:'s',
+            ans:'a'
+        },
+        {
+            no:'5',
+            ques:'How to create an list in HTML?',
+            opt: ['<ol>','<ul>','<href>','<li>'],
+            qType:'m',
+            ans:'b'
+        },
+        {
+            no:'6',
+            ques:'Which are the block level elements ?',
+            opt: ['<h1>','<p>','<span>','<div>'],
+            qType:'m',
+            ans:'b'
+        }
+        
+
+    ];
+        
+
+        return <div>
+            <h1 style={{textAlign:'center'}} > Solve the following </h1>
+                {
+                    questions.map((obj,index)=>{
+                        const {no,ques,opt,qType}=obj;
+                        return <div key={index}>
+                            <h3>Q No. {no} {ques}</h3>
+                            {
+                                obj.opt.map((ob,val)=>{
+                                    return <div style={{paddingTop:10}} key={val}> {qType=='s'?<input name={no} type='radio'/> : <input type='checkbox' /> } {ob} </div>
+                                })
+                            }
+                            </div>
+                    })
+                }
+                <button style={{marginTop:20}}>Submit</button>
+            </div>
+    }
+
+
+    var root=ReactDOM.createRoot(document.getElementById('root'))
+    root.render(<App />)
+
+</script>
+

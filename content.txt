@@ -1,0 +1,244 @@
+Srinivas
+
+60 hours
+
+
+HTML 2h
+
+1. why we go for HTML
+2. inline vs block level elements
+3. attributes
+4. inputControls
+5. table,list
+
+CSS -6h
+
+1. Why we go for CSS 
+2. How many ways can we apply CSS ?
+3. selectors
+4. media queries
+5. postions
+6. bootstrap
+7. Box model
+8. flex
+
+
+JavaScript: 
+
+1. Introduction
+2. Variables And functions
+3. Array Methods
+4. String Methods
+5. JSON Object
+6. Get Reference
+7. Apply Styles
+8. Events
+9. Event Looping
+10. Debouncing
+11. Throttling
+12. Async vs defer
+13. OOPS
+14. Set Timeout
+15. Set Interval
+16. Browser Storages
+17. BOM
+18. Call apply bind
+19. Closure
+20. Bubbling And Capturing
+21. Exception Handling
+22. Callbacks
+23. Promises
+24. Async Await
+25. AJAX
+26. Generators
+27. async functions
+28. Arrow functions
+29. spread operator vs rest operator
+30. Object destructuring
+
+
+React: 
+
+1. Why we go for React ? 
+
+2. How to prepare the templates in react (using class, functional components) and JSX
+              
+3. How to handle the events(click, focus, blur ...) ?
+
+4. How to take the data from inputControls(textbox,password,radio,checkbox,textarea,fileupload,dropdown) ?
+
+5. var vs let  vs const  vs this vs state vs props vs refs 
+
+6. State value update, prop value update
+
+7. commnunication b/w components (parent-child , child - parent)
+
+8. context api 
+
+9. How to handle AJAX(XMLHttpRequest, fetch, axios)
+
+10. lifecycle methods
+
+11. lists and keys
+
+12. reusable components 
+
+13. How to apply styles dynamically (inline, class)
+
+14. Hanlde Routing in react 
+
+15. node js 
+
+16. MongoDB
+
+17. Conditional Rendering
+
+18. Proptypes, defaultprops
+
+19. forward ref 
+
+20. integrate bootstrap, react bootstrap, material ui design
+
+21. Optimizing Performance
+
+22. Build and Deploy Application (Godaddy, AWS, Vercel, Azure, GIT)
+
+23. test cases
+
+24. create and publish your own components using npm
+
+25. webpack
+
+Redux :
+
+1. How implement Redux in your react Application
+
+2. actions, reducer, store 
+
+3. redux Thunk 
+
+4. redux Saga 
+
+
+1. Zustand
+
+
+React Hooks: 
+
+1. useState
+2. useEffect
+3. useRef
+4. useContext
+5. useReducer
+6. useMemo
+7. useCallback
+8. useTransistion
+
+
+EtoE Application(Online Test) : 
+
+1. client(React +Redux)  + Server(node with express + jwt) + MongoDB 
+
+
+weekends: 
+
+1. Next -- 
+
+
+2. React Native --
+
+
+3. React Typescript --
+
+
+4. GraphQL --
+
+
+5. testcases --
+
+
+Softwares need to install:
+
+
+1. Visual Studio Code 
+
+2. git
+
+3. DesktopGit
+
+4. MongoDB
+
+5. MongoDB compass
+
+6. Node js
+
+
+Create Accounts:
+
+1. https://github.com/
+
+2. https://www.vercel.com/
+
+3. https://mongodb.com/
+
+4. https://aws.amazon.com/
+
+5. https://azure.microsoft.com/en-in/
+
+6. Godaddy
+
+
+Website:
+
+www.uijavakit.com
+
+Videos:
+
+Day-1 https://youtu.be/P6ggMCtNNhY
+Day-2 https://youtu.be/rhuICMrd1FI
+Day-3 https://youtu.be/_7mTVAMB1sE
+Day-4 https://youtu.be/jdh6ekzFdLc
+Day-5 https://youtu.be/Zf-2t944HFA
+Day-6 https://youtu.be/WJtuUVrlqAQ
+Day-7 https://youtu.be/u2yf_cSFQpM
+Day-8 https://youtu.be/4PwcB4WrT6s
+Day-9 https://youtu.be/KnAnMzK8AfQ
+Day-10 https://youtu.be/DXuB9v5RfkQ
+Day-11 https://youtu.be/m-NQjYsFaqE
+Day-12 https://youtu.be/WeUzoFLYQw4
+
+
+Link: https://bit.ly/ReactJS9am
+
+
+Dear Students please pay the fee for Core Java 9am by Mr. Harikrishna 
+
+           **FEE RS.5000/-(Without Videos)* And **8000/-(With Videos)* 
+
+
+Bank Details 
+Name: Naresh i Technologies
+A/C No. 50200022639833     
+Bank: HDFC
+A/C Type: Current Account
+IFSC Code: HDFC0001627
+MICR Code: 500240035
+Branch Code: 001627
+Branch:  Ameerpet
+
+Note: If you want to use Phonepe or Google Pay then follow the below steps.
+
+You can find the option Bank Transfer in Phonepe and Google pay. There you can enter our bank account number and you can transfer the amount.  Please mention your Name on the receipt and send a email once the payment is done to support@nareshit.com.
+  
+For any Queries, You can can Call us on +91-6302968665 or email us to support@nareshit.com 
+
+Please share your feedback to Srikanth.
+
+Thanks and Regards 
+Srikanth
+
+
+
+
+
+

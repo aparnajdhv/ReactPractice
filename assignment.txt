@@ -1,0 +1,7 @@
+1. even no. or odd
+2. check prime no. or not
+3. revese name
+4. sum, sub, multi, div, mod
+no. 1 
+no.2 
+print result

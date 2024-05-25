@@ -1,0 +1,29 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+    const App=()=>{
+        const ref1=React.useRef();
+        const ref2=React.useRef();
+        const ref3=React.useRef();
+        const sum=()=>{
+            const n1=ref1.current.value;
+            const n2=ref2.current.value;
+            ref3.current.innerText=parseInt(n1)+parseInt(n2);
+        }
+        return <div>
+                <p>No. 1 <input ref={ref1} /></p>
+                <p> No. 2 <input ref={ref2}/></p>
+                <button onClick={sum} >Sum</button>
+                <p> Result <span ref={ref3}>0</span></p>
+            </div>
+    }
+
+    var root=ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />)
+
+</script>

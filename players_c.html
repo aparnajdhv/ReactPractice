@@ -1,0 +1,60 @@
+<script src="react.development.js"></script>
+<script src="babel.js"></script>
+<script src="react-dom.development.js"></script>
+<link rel="stylesheet" href="style.css">
+<import './justCheck.html'; />
+<style>
+    #root{
+        
+    }
+    
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+        <div className='head_data'>
+                <Person name='Amol' />
+                <Person name='Aarohi' />
+            </div>
+
+    class Player extends React.Component{
+        render(){
+            
+            return <div className="play_div">
+                    <div className="play_box">
+                        My name is {this.props.n} 
+                    </div>
+                    <div className="play_box">
+                         I am from {this.props.loc}. 
+                         <button className="play_btn">Submit</button>
+                    </div>
+                </div>
+        }
+    }
+    
+    class App extends React.Component{
+
+            place='Mumbai';
+            name='Dravid';
+             render(){
+            return <div>
+            <Player n={this.name} loc={this.place} />
+            <Player n='Dhoni' loc='Ranchi' />
+            <Player n='Kohli' loc='Delhi' />
+            <Player n='Panth' loc='Delhi' />
+                </div>
+        }
+    }
+
+    // <div>Hello</div>
+    //     <div>3rd Div/ Grid Section</div>
+   
+    
+
+    var root=ReactDOM.createRoot(document.getElementById('root'))
+    root.render(<App />)
+
+</script>
+

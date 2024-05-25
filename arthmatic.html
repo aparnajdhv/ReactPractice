@@ -1,0 +1,36 @@
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+ 
+<div id="root"></div>
+   
+<script type="text/babel">
+    const App=()=>{
+        const n1=React.useRef();
+        const n2=React.useRef();
+        const displayRes=React.useRef();
+        const sum=()=>{
+            const num1=n1.current.value;
+            const num2=n2.current.value;
+            const sum=parseInt(num1)+parseInt(num2);
+            displayRes.current.innerText=sum
+
+            if(sum>100){
+                displayRes.current.style.color = 'red';
+            }else{
+                displayRes.current.style.color = 'blue';
+            }
+        }
+        return <div>
+        <p>No. 1<input ref={n1} /> </p>
+        <p>No. 2<input ref={n2} /> </p>
+        <p><button onClick={sum} >Sum </button></p>
+        <h3>Result <span ref={displayRes}>0</span></h3>
+        </div>
+    }
+var root=ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(<App />);
+</script>  
+    

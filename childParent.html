@@ -1,0 +1,55 @@
+<script src="react.development.js"></script>
+<script src="babel.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+const Child=(props)=>{
+
+    const [data,setData]=React.useState({});
+    const [msg,setMsg]=React.useState(0);
+    const result=0;
+      
+    const fnChange=(eve)=>{
+        const {id,value}=eve.target;
+        setData({...data,[id]:Number(value)});  
+            
+    }
+    const fnClick=(eve)=>{
+        const {n1,n2}=data;
+        const result=n1+n2;
+        props.fn(result);
+        
+        //console.log(props.fn(result));
+        //console.log(setMsg(props.fn(n1,n2)));
+    }
+
+    return <div>
+        <p> no 1<input  id='n1' onChange={fnChange} /></p>
+        <p>no 2<input id='n2'onChange={fnChange} /></p>
+        <button name='sub' onClick={fnClick}>Sub</button>
+        
+        </div>
+}
+
+const App=()=>{
+    
+    const [msg,setMsg]=React.useState(0);
+    const getResult=(result)=>{        
+        setMsg(result);
+    }
+    
+    return <div>
+        
+        <Child fn={getResult} />
+        <h3>Result:{msg}</h3>
+        </div>
+}
+
+const root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
+
+</script>

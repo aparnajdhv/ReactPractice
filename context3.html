@@ -1,0 +1,57 @@
+<script src="react.development.js"></script>
+<script src="babel.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+//1. create context 
+const ctx=React.createContext()
+
+const E=()=>{
+        const ctxData=React.useContext(ctx)
+        return <div>
+             <h1>E:{ctxData[0]}</h1>
+            </div>
+    }
+const D=()=>{
+        return <div>
+             <h1>D</h1>
+             <E />
+            </div>
+    }
+ const C=()=>{
+    const ctxData=React.useContext(ctx)
+        return <div>
+             <h1>C:{ctxData[2]}</h1>
+            </div>
+    }
+ const B=()=>{
+        return <div>
+             <h1>B</h1>
+             <C />
+             <D />
+            </div>
+    }
+const A=()=>{
+        return <div>
+             <h1>A</h1>
+             <B />
+            </div>
+    }
+    const App=()=>{
+        return <div>
+             <h1>App</h1>
+             <A />
+            </div>
+    }
+    var root=ReactDOM.createRoot(document.getElementById('root'))
+    root.render(<ctx.Provider value={['Sachin','Dhoni','Kohli']}><App /></ctx.Provider>)
+
+</script>
+
+
+
+
+

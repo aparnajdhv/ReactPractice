@@ -1,0 +1,27 @@
+<script src="react.development.js"></script>
+<script src="babel.js"></script>
+<script src="react-dom.development.js"></script>
+
+
+<div id="root"></div>
+
+
+
+<script type="text/babel">
+
+   function Student(obj){
+        return  <h1>My name is {obj.name}, studying {obj['cls']}, from {obj.children}.</h1> 
+   }
+
+   
+   function App(){
+     return <div>
+           <Student name='s1' cls="B.Tech">Hyd</Student>
+           <Student name='s2' cls='MCA'>Pune</Student>
+           <Student name='s3' cls='M.Tech'>Delhi</Student>
+        </div>
+   }
+   
+   var root=ReactDOM.createRoot(document.getElementById('root'))
+   root.render(<App />)
+</script>

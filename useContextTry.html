@@ -1,0 +1,115 @@
+<script src="react.development.js"></script>
+<script src="babel.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+const cntxName=React.createContext();
+const cntTwo=React.createContext();
+const cntThree =React.createContext();
+
+const A=()=>{
+    const adata=React.useContext(cntxName)
+    return <div>
+        <h3>A component :{adata}</h3>
+        
+        </div>
+}
+const B=()=>{
+    const bdata=React.useContext(cntTwo)
+    return <div>
+        <h3>B component :{bdata}</h3>
+        
+        </div>
+}
+const C=()=>{
+    const cdata=React.useContext(cntThree)
+     return <div>
+         <h3>C component :{cdata}</h3>
+        
+         </div>
+}
+const App=()=>{
+
+    const [data,setData]=React.useState({});
+    const [msg,setMsg]=React.useState(0);
+    const fnChange=(eve)=>{
+        const {id,value}=eve.target;
+        setData({...data,[id]:Number(value)})        
+    }
+
+    const fnClick=(eve)=>{
+        const {n1,n2}=data;  
+        let result=0;
+        result=n1+n2;  
+        console.log(result);
+        setMsg(result);    
+        
+    }
+
+    const [mData,stData]=React.useState({});
+    const [mMsg,stMsg]=React.useState(0);
+
+    const funChange=(eve)=>{
+        const {id,value}=eve.target;
+        //console.log({[id]:Number(value)});
+        stData({...mData,[id]:Number(value)})        
+    }
+
+    const fnSubmit=(eve)=>{
+        const {num1,num2}=mData;  
+        let result=0;
+        result=num1* num2;  
+        //console.log(result);
+        stMsg(result);    
+        console.log(result);
+    }
+
+    const nameRef=React.useRef()
+        const [threeMsg,setRevMsg]=React.useState('')
+        const revClick=()=>{
+            let name=nameRef.current.value;
+            let result= name.split("").reverse().join("")
+            setRevMsg(result)
+        }
+
+    return <div> 
+                <div className='sumDiv'>
+                    <p>No. 1<input id='n1' onChange={fnChange} /></p>
+                    <p>No. 2<input id='n2' onChange={fnChange} /></p>
+                    <button onClick={fnClick}>Add Num</button>
+                    <cntxName.Provider value={msg}>
+                        <A />
+                        
+                    </cntxName.Provider>
+                </div>
+
+                <div className='multDiv'>
+                    <p>No. 1<input id='num1' onChange={funChange} /></p>
+                    <p>No. 2<input id='num2' onChange={funChange} /></p>
+                    <button onClick={fnSubmit}>Multiply</button>
+                    <cntTwo.Provider value={mMsg}>
+                        <B />
+                        
+                    </cntTwo.Provider>
+                    
+                </div>
+                <div className='reverse'>
+                    <p>No. 1<input id='str' ref={nameRef} /></p>
+                    
+                    <button onClick={revClick}>Reverse</button>
+                    
+                    <cntThree.Provider value={threeMsg}>
+                        
+                        <C />
+                        
+                    </cntThree.Provider>
+                </div>
+        </div>
+}
+
+var root=ReactDOM.createRoot(document.getElementById('root'))
+root.render(<App/>);
+</script>

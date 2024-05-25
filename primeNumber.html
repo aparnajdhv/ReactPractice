@@ -1,0 +1,46 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+const App=()=>{
+
+    const r1=React.useRef();
+    
+    const r3=React.useRef();
+
+    const even=()=>{
+        const n=parseInt(r1.current.value);
+        
+        if(n>1){
+        for(let x = 2; x < n; x++){            
+            if (n % x == 0) {
+                r3.current.innerText='Number is Not Prime';  
+                break;                                  
+            }else{                
+                r3.current.innerText='Number is Prime';
+            }
+        }         
+    } 
+        
+        
+    }
+
+    return <div>
+            <p>Check Even or Odd Number </p>
+            <p>No. 1 <input ref={r1} /></p>
+            <p><button onClick={even}>Check</button></p>
+            <h3>Result = <span ref={r3}></span></h3>
+        </div>
+
+}
+
+    var root=ReactDOM.createRoot(document.getElementById('root'));
+
+    root.render(<App />);
+
+</script>

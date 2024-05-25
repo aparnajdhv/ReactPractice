@@ -1,0 +1,33 @@
+.play_div{
+    display: grid;
+    grid-template-columns: auto auto ;
+    padding: 10px;
+    background-color: grey;
+
+
+    
+
+}
+.play_box{
+    border: 1px solid #010;
+    margin :10px;
+    padding: 10px;
+    font-size: 30px;
+    column-gap: 20px;
+    background-color: aliceblue;
+    display: inline-block;
+}
+.play_btn{
+padding: 10px;
+background-color: black;
+color: aqua;
+font-size: 20px;
+text-align: end;
+float: right;
+border: 0px;
+border-radius: 5px;
+}
+
+.head_data{
+    background-color: coral;
+}

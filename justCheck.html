@@ -1,0 +1,35 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<style></style>
+
+<div id="root">
+
+</div>
+
+<script type="text/babel">
+
+    class Person extends React.Component {
+        render(){
+        return <div className="decor">
+                <h1>You are my Darling {this.props.name}.</h1>
+            </div>
+        }
+    }
+
+    class App extends React.Component{
+        render(){
+        return <div className='head_data'>
+                <Person name='Amol' />
+                <Person name='Aarohi' />
+            </div>
+        }
+    }
+
+    var root=ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />)
+ 
+</script>
+<export 'justCheck.html' ; />
